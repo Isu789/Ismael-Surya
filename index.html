@@ -86,26 +86,32 @@ a {
 
 <!-- HEADER MODIFIE -->
 <header>
-  <div style="background-color:#111; color:white; display:flex; flex-wrap:wrap; align-items:center; padding:20px;">
+  <div style="background-color:#111; color:white; display:flex; justify-content:center; padding:40px 20px;">
 
-    <!-- Photo à gauche -->
-    <div style="flex:1; min-width:250px; text-align:center;">
-      <img src="photo-principale.jpg" alt="Surya Ismael" style="max-width:100%; height:auto; border-radius:4px;">
-    </div>
+    <!-- Conteneur central aligné avec le reste du site -->
+    <div style="display:flex; flex-wrap:wrap; max-width:900px; width:100%; align-items:center; gap:20px;">
 
-    <!-- Biographie et email à droite -->
-    <div style="flex:2; min-width:250px; padding-left:20px; display:flex; flex-direction:column; justify-content:center;">
-      <!-- Email en haut à droite -->
-      <p style="text-align:right; margin:0 0 10px 0; font-weight:500;">📧 <a href="mailto:surya.ismael@gmail.com" style="color:white;">surya.ismael@gmail.com</a></p>
-      
-      <h1 style="margin-top:0; font-family: 'Playfair Display', serif; font-size:2.5em;">Surya Ismael</h1>
-      <p>
-        Comédienne basée à [Ville], formée au [Nom école]. Elle développe un jeu sensible et incarné, entre théâtre et cinéma. Son travail explore des rôles intenses et nuancés.
-      </p>
+      <!-- Photo centrée verticalement -->
+      <div style="flex:1 1 250px; text-align:center;">
+        <img src="photo-principale.jpg" alt="Nom Prénom" style="width:200px; height:auto; border-radius:4px;">
+      </div>
+
+      <!-- Biographie et email à côté -->
+      <div style="flex:2 1 400px; display:flex; flex-direction:column; justify-content:center;">
+        <!-- Email en haut -->
+        <p style="text-align:right; margin:0 0 10px 0; font-weight:500;">📧 <a href="mailto:email@email.com" style="color:white;">email@email.com</a></p>
+
+        <h1 style="margin-top:0; font-family: 'Playfair Display', serif; font-size:2.5em;">Nom Prénom</h1>
+        <p>
+          Comédienne basée à [Ville], formée au [Nom école]. Elle développe un jeu sensible et incarné, entre théâtre et cinéma. Son travail explore des rôles intenses et nuancés.
+        </p>
+      </div>
+
     </div>
 
   </div>
 </header>
+
 
 <!-- BIOGRAPHIE -->
 <section>
