@@ -50,7 +50,132 @@ h2 {
     overflow: hidden;
 }
 
-.video-co
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
+.btn-download {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #111;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 20px;
+    border-radius: 4px;
+}
 
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER FINAL -->
+<header>
+  <div style="background-color:#111; color:white; display:flex; justify-content:center; padding:40px 20px;">
+
+    <!-- Conteneur central aligné avec largeur du contenu -->
+    <div style="display:flex; flex-wrap:wrap; max-width:780px; width:100%; align-items:center; gap:20px;">
+
+      <!-- Photo à gauche, plus grande et alignée -->
+      <div style="flex:0 0 200px; text-align:left;">
+        <img src="photo-principale.jpg" alt="Nom Prénom" style="width:200px; height:auto; border-radius:4px;">
+      </div>
+
+      <!-- Biographie à droite -->
+      <div style="flex:1 1 auto; display:flex; flex-direction:column; justify-content:center;">
+        <!-- Email en haut -->
+        <p style="text-align:right; margin:0 0 10px 0; font-weight:500;">📧 <a href="mailto:email@email.com" style="color:white;">email@email.com</a></p>
+
+        <h1 style="margin-top:0; font-family: 'Playfair Display', serif; font-size:2em;">Nom Prénom</h1>
+        <p style="margin-top:5px;">
+          Comédienne basée à [Ville], formée au [Nom école]. Elle développe un jeu sensible et incarné, entre théâtre et cinéma. Son travail explore des rôles intenses et nuancés.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+<!-- BIOGRAPHIE -->
+<section>
+    <h2>Biographie</h2>
+    <p>
+    Comédienne basée à [Ville], formée au [Nom école].
+    Elle développe un jeu sensible et incarné, entre théâtre et cinéma.
+    Son travail explore des rôles intenses et nuancés.
+    </p>
+</section>
+
+<!-- BANDE DEMO -->
+<section>
+    <h2>Bande Démo</h2>
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/ID_DE_TA_VIDEO" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<!-- CV ARTISTIQUE -->
+<section>
+    <h2>CV Artistique</h2>
+
+    <h3>Théâtre</h3>
+    <div class="cv-item">2024 – Nom de la pièce – Mise en scène : Nom – Rôle : XXX</div>
+
+    <h3>Cinéma</h3>
+    <div class="cv-item">2023 – Titre – Réalisateur : Nom – Rôle : XXX</div>
+
+    <h3>Formation</h3>
+    <div class="cv-item">Nom école – Année</div>
+
+    <h3>Compétences</h3>
+    <div class="cv-item">Langues : Français, Anglais</div>
+
+    <!-- Bouton Télécharger le CV -->
+    <a href="CV.pdf" download class="btn-download">Télécharger le CV</a>
+</section>
+
+<!-- GALERIE -->
+<section>
+    <h2>Galerie</h2>
+    <div class="gallery">
+        <img src="photo1.jpg" alt="">
+        <img src="photo2.jpg" alt="">
+        <img src="photo3.jpg" alt="">
+        <img src="photo4.jpg" alt="">
+        <img src="photo5.jpg" alt="">
+        <img src="photo6.jpg" alt="">
+        <img src="photo7.jpg" alt="">
+        <img src="photo8.jpg" alt="">
+        <img src="photo9.jpg" alt="">
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h2>Contact</h2>
+    <p>Email : <a href="mailto:email@email.com">email@email.com</a></p>
+</footer>
+
+</body>
+</html>
 
