@@ -85,24 +85,25 @@ a {
 <body>
 
 <!-- HEADER MODIFIE -->
-<header>
+
+    <header>
   <div style="background-color:#111; color:white; display:flex; justify-content:center; padding:40px 20px;">
 
-    <!-- Conteneur central aligné avec le reste du site -->
-    <div style="display:flex; flex-wrap:wrap; max-width:900px; width:100%; align-items:center; gap:20px;">
+    <!-- Conteneur central aligné avec largeur galerie 3 colonnes -->
+    <div style="display:flex; flex-wrap:wrap; max-width:780px; width:100%; align-items:center; gap:20px;">
 
-      <!-- Photo centrée verticalement -->
-      <div style="flex:1 1 250px; text-align:center;">
-        <img src="photo-principale.jpg" alt="Nom Prénom" style="width:200px; height:auto; border-radius:4px;">
+      <!-- Photo compacte centrée -->
+      <div style="flex:0 0 150px; text-align:center;">
+        <img src="photo-principale.jpg" alt="Nom Prénom" style="width:150px; height:auto; border-radius:4px;">
       </div>
 
-      <!-- Biographie et email à côté -->
-      <div style="flex:2 1 400px; display:flex; flex-direction:column; justify-content:center;">
+      <!-- Biographie à côté -->
+      <div style="flex:1 1 auto; display:flex; flex-direction:column; justify-content:center;">
         <!-- Email en haut -->
         <p style="text-align:right; margin:0 0 10px 0; font-weight:500;">📧 <a href="mailto:email@email.com" style="color:white;">email@email.com</a></p>
 
-        <h1 style="margin-top:0; font-family: 'Playfair Display', serif; font-size:2.5em;">Nom Prénom</h1>
-        <p>
+        <h1 style="margin-top:0; font-family: 'Playfair Display', serif; font-size:2em;">Nom Prénom</h1>
+        <p style="margin-top:5px;">
           Comédienne basée à [Ville], formée au [Nom école]. Elle développe un jeu sensible et incarné, entre théâtre et cinéma. Son travail explore des rôles intenses et nuancés.
         </p>
       </div>
@@ -111,6 +112,7 @@ a {
 
   </div>
 </header>
+
 
 
 <!-- BIOGRAPHIE -->
