@@ -14,28 +14,6 @@ body {
     line-height: 1.6;
 }
 
-header {
-    height: 70vh; /* moins haute */
-    background: url('photo-principale.jpg') center/contain no-repeat; /* photo visible en entier */
-    display: flex;
-    align-items: flex-end; /* pour que le texte soit plus bas */
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding-bottom: 40px;
-}
-
-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3em;
-    margin: 0;
-}
-
-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
 section {
     padding: 80px 20px;
     max-width: 900px;
@@ -106,13 +84,30 @@ a {
 </head>
 <body>
 
+<!-- HEADER MODIFIE -->
 <header>
-    <div>
-        <h1>Nom Prénom</h1>
-        <p>Comédienne</p>
+  <div style="background-color:#111; color:white; display:flex; flex-wrap:wrap; align-items:center; padding:20px;">
+
+    <!-- Photo à gauche -->
+    <div style="flex:1; min-width:250px; text-align:center;">
+      <img src="photo-principale.jpg" alt="Surya Ismael" style="max-width:100%; height:auto; border-radius:4px;">
     </div>
+
+    <!-- Biographie et email à droite -->
+    <div style="flex:2; min-width:250px; padding-left:20px; display:flex; flex-direction:column; justify-content:center;">
+      <!-- Email en haut à droite -->
+      <p style="text-align:right; margin:0 0 10px 0; font-weight:500;">📧 <a href="mailto:surya.ismael@gmail.com" style="color:white;">surya.ismael@gmail.com</a></p>
+      
+      <h1 style="margin-top:0; font-family: 'Playfair Display', serif; font-size:2.5em;">Surya Ismael</h1>
+      <p>
+        Comédienne basée à [Ville], formée au [Nom école]. Elle développe un jeu sensible et incarné, entre théâtre et cinéma. Son travail explore des rôles intenses et nuancés.
+      </p>
+    </div>
+
+  </div>
 </header>
 
+<!-- BIOGRAPHIE -->
 <section>
     <h2>Biographie</h2>
     <p>
@@ -122,6 +117,7 @@ a {
     </p>
 </section>
 
+<!-- BANDE DEMO -->
 <section>
     <h2>Bande Démo</h2>
     <div class="video-container">
@@ -133,6 +129,7 @@ a {
     </div>
 </section>
 
+<!-- CV ARTISTIQUE -->
 <section>
     <h2>CV Artistique</h2>
 
@@ -152,6 +149,7 @@ a {
     <a href="CV.pdf" download class="btn-download">Télécharger le CV</a>
 </section>
 
+<!-- GALERIE -->
 <section>
     <h2>Galerie</h2>
     <div class="gallery">
@@ -167,12 +165,13 @@ a {
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <h2>Contact</h2>
     <p>Email : <a href="mailto:email@email.com">email@email.com</a></p>
-    <p>Instagram : @nom</p>
 </footer>
 
 </body>
 </html>
+
 
