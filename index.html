@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nom Prénom - Comédienne</title>
+<title>Surya Ismael - Comédienne</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 <style>
 body {
@@ -11,11 +11,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffff;
     color: #111;
-    line-height: 1.6;
+    line-height: 1.5; /* un peu moins d'espace entre les lignes */
 }
 
 section {
-    padding: 80px 20px;
+    padding: 50px 20px; /* moins d'espace entre le header et les sections */
     max-width: 900px;
     margin: auto;
 }
@@ -23,11 +23,15 @@ section {
 h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2em;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* réduit */
+}
+
+p {
+    margin: 5px 0; /* réduit l'espacement entre paragraphes */
 }
 
 .cv-item {
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* réduit l'espacement entre les items */
 }
 
 .gallery {
@@ -65,13 +69,13 @@ h2 {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 10px; /* réduit l'espacement */
     border-radius: 4px;
 }
 
 footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 20px; /* réduit l'espacement */
     background-color: #f4f4f4;
 }
 
@@ -85,22 +89,21 @@ a {
 <body>
 
 <!-- HEADER FINAL -->
-
-    <header>
+<header>
   <div style="background-color:#111; color:white; display:flex; justify-content:center; padding:40px 20px;">
 
-    <!-- Conteneur central avec largeur des sections -->
+    <!-- Conteneur central aligné avec la largeur des sections -->
     <div style="display:flex; max-width:900px; width:100%; align-items:center; gap:30px; flex-wrap:nowrap;">
 
-      <!-- Photo principale à gauche (plus grande) -->
+      <!-- Photo principale à gauche -->
       <div style="flex:0 0 230px; text-align:left;">
         <img src="photo-principale.jpg" alt="Surya Ismael" style="width:290px; height:auto; border-radius:4px;">
       </div>
 
       <!-- Nom, prénom et bio à droite -->
-      <div style="flex:1 1 auto; display:flex; flex-direction:column; justify-content:center;">
+      <div style="flex:1 1 auto; display:flex; flex-direction:column; justify-content:flex-start;"> <!-- Nom + prénom plus haut -->
         <h1 style="margin:0; font-family: 'Playfair Display', serif; font-size:2.5em;">Surya Ismael</h1>
-        <p style="margin:10px 0 0 0;">
+        <p style="margin:5px 0 0 0;">
           Comédienne basée à [Ville], formée au [Nom école]. Elle développe un jeu sensible et incarné, entre théâtre et cinéma. Son travail explore des rôles intenses et nuancés.
         </p>
         <p style="text-align:right; margin-top:10px; font-weight:500;">📧 <a href="mailto:surya.ismael@gmail.com" style="color:white;">surya.ismael@gmail.com</a></p>
@@ -110,18 +113,6 @@ a {
 
   </div>
 </header>
-
-
-
-<!-- BIOGRAPHIE -->
-<section>
-    <h2>Biographie</h2>
-    <p>
-    Comédienne basée à [Ville], formée au [Nom école].
-    Elle développe un jeu sensible et incarné, entre théâtre et cinéma.
-    Son travail explore des rôles intenses et nuancés.
-    </p>
-</section>
 
 <!-- BANDE DEMO -->
 <section>
@@ -179,4 +170,3 @@ a {
 
 </body>
 </html>
-
