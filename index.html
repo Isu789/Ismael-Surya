@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nom Prénom - Comédienne</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #111;
+    line-height: 1.6;
+}
+
+header {
+    height: 100vh;
+    background: url('photo-principale.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.cv-item {
+    margin-bottom: 15px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Bande démo responsive */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>Nom Prénom</h1>
+        <p>Comédienne</p>
+    </div>
+</header>
+
+<section>
+    <h2>Biographie</h2>
+    <p>
+    Comédienne basée à [Ville], formée au [Nom école].
+    Elle développe un jeu sensible et incarné, entre théâtre et cinéma.
+    Son travail explore des rôles intenses et nuancés.
+    </p>
+</section>
+
+<section>
+    <h2>Bande Démo</h2>
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/ID_DE_TA_VIDEO" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<section>
+    <h2>CV Artistique</h2>
+
+    <h3>Théâtre</h3>
+    <div class="cv-item">2024 – Nom de la pièce – Mise en scène : Nom – Rôle : XXX</div>
+
+    <h3>Cinéma</h3>
+    <div class="cv-item">2023 – Titre – Réalisateur : Nom – Rôle : XXX</div>
+
+    <h3>Formation</h3>
+    <div class="cv-item">Nom école – Année</div>
+
+    <h3>Compétences</h3>
+    <div class="cv-item">Langues : Français, Anglais</div>
+</section>
+
+<section>
+    <h2>Galerie</h2>
+    <div class="gallery">
+        <img src="photo1.jpg" alt="">
+        <img src="photo2.jpg" alt="">
+        <img src="photo3.jpg" alt="">
+    </div>
+</section>
+
+<footer>
+    <h2>Contact</h2>
+    <p>Email : <a href="mailto:email@email.com">email@email.com</a></p>
+    <p>Instagram : @nom</p>
+</footer>
+
+</body>
+</html>
