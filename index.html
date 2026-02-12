@@ -11,27 +11,27 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffff;
     color: #111;
-    line-height: 1.5; /* un peu moins d'espace entre les lignes */
+    line-height: 1.5;
 }
 
 section {
-    padding: 50px 20px; /* moins d'espace entre le header et les sections */
+    padding: 25px 20px; /* ESPACE BEAUCOUP REDUIT */
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto; /* supprime espace vertical automatique */
 }
 
 h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2em;
-    margin-bottom: 20px; /* réduit */
+    margin-bottom: 10px; /* réduit fortement */
 }
 
 p {
-    margin: 5px 0; /* réduit l'espacement entre paragraphes */
+    margin: 4px 0; /* paragraphes plus rapprochés */
 }
 
 .cv-item {
-    margin-bottom: 10px; /* réduit l'espacement entre les items */
+    margin-bottom: 6px; /* CV plus compact */
 }
 
 .gallery {
@@ -52,6 +52,7 @@ p {
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
+    margin-top: 10px;
 }
 
 .video-container iframe {
@@ -69,13 +70,13 @@ p {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-top: 10px; /* réduit l'espacement */
+    margin-top: 8px;
     border-radius: 4px;
 }
 
 footer {
     text-align: center;
-    padding: 30px 20px; /* réduit l'espacement */
+    padding: 20px 20px;
     background-color: #f4f4f4;
 }
 
@@ -88,29 +89,32 @@ a {
 </head>
 <body>
 
-<!-- HEADER FINAL -->
+<!-- HEADER -->
 <header>
-  <div style="background-color:#111; color:white; display:flex; justify-content:center; padding:40px 20px;">
+  <div style="background-color:#111; color:white; display:flex; justify-content:center; padding:35px 20px;">
 
-    <!-- Conteneur central aligné avec la largeur des sections -->
     <div style="display:flex; max-width:900px; width:100%; align-items:center; gap:30px; flex-wrap:nowrap;">
 
-      <!-- Photo principale à gauche -->
+      <!-- Photo -->
       <div style="flex:0 0 230px; text-align:left;">
         <img src="photo-principale.jpg" alt="Surya Ismael" style="width:290px; height:auto; border-radius:4px;">
       </div>
 
-      <!-- Nom, prénom et bio à droite -->
-      <div style="flex:1 1 auto; display:flex; flex-direction:column; justify-content:flex-start;"> <!-- Nom + prénom plus haut -->
+      <!-- Texte -->
+      <div style="flex:1 1 auto; display:flex; flex-direction:column; justify-content:flex-start;">
         <h1 style="margin:0; font-family: 'Playfair Display', serif; font-size:2.5em;">Surya Ismael</h1>
-        <p style="margin:5px 0 0 0;">
+
+        <p style="margin:6px 0 0 0;">
           Comédienne basée à [Ville], formée au [Nom école]. Elle développe un jeu sensible et incarné, entre théâtre et cinéma. Son travail explore des rôles intenses et nuancés.
         </p>
-        <p style="text-align:right; margin-top:10px; font-weight:500;">📧 <a href="mailto:surya.ismael@gmail.com" style="color:white;">surya.ismael@gmail.com</a></p>
+
+        <!-- EMAIL ALIGNÉ À GAUCHE -->
+        <p style="margin-top:8px; font-weight:500;">
+          📧 <a href="mailto:surya.ismael@gmail.com" style="color:white;">surya.ismael@gmail.com</a>
+        </p>
       </div>
 
     </div>
-
   </div>
 </header>
 
@@ -126,7 +130,7 @@ a {
     </div>
 </section>
 
-<!-- CV ARTISTIQUE -->
+<!-- CV -->
 <section>
     <h2>CV Artistique</h2>
 
@@ -142,7 +146,6 @@ a {
     <h3>Compétences</h3>
     <div class="cv-item">Langues : Français, Anglais</div>
 
-    <!-- Bouton Télécharger le CV -->
     <a href="CV.pdf" download class="btn-download">Télécharger le CV</a>
 </section>
 
@@ -165,9 +168,8 @@ a {
 <!-- FOOTER -->
 <footer>
     <h2>Contact</h2>
-    <p>Email : <a href="mailto:email@email.com">email@email.com</a></p>
+    <p>Email : <a href="mailto:surya.ismael@gmail.com">surya.ismael@gmail.com</a></p>
 </footer>
 
 </body>
 </html>
-
