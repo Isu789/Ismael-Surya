@@ -36,15 +36,16 @@ p {
     margin-bottom: 6px;
 }
 
+/* GALERIE */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
 }
 
 .gallery img {
     width: 100%;
-    height: 350px;
+    height: 220px;
     object-fit: cover;
     cursor: pointer;
 }
@@ -59,6 +60,7 @@ p {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.9);
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -69,9 +71,7 @@ p {
     object-fit: contain;
 }
 
-.close,
-.prev,
-.next {
+.close, .prev, .next {
     position: absolute;
     color: white;
     font-size: 40px;
@@ -119,47 +119,75 @@ a {
     font-weight: 500;
 }
 
+/* --- HEADER --- */
+header {
+    background-color: #111;
+    color: white;
+    padding: 35px 20px;
+}
+
+.header-inner {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.header-photo img {
+    width: 290px;
+    border-radius: 4px;
+}
+
+.header-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+}
+
+.header-text .metier {
+    margin-top: 8px;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.header-text .infos {
+    margin-top: 8px;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+.header-text .separator {
+    width: 60px;
+    height: 1px;
+    background-color: white;
+    margin: 25px 0 15px 0;
+}
+
 /* --- VERSION MOBILE --- */
 @media screen and (max-width: 768px) {
-  /* Header responsive : photo au-dessus, texte en dessous, aligné à gauche */
-  header > div {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 20px !important;
-  }
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  header img {
-    width: 220px !important;
-    height: auto !important;
-  }
+    .header-photo img {
+        width: 220px;
+    }
 
-  header h1, 
-  header div[style*="Comédienne – Voix"],
-  header div[style*="line-height:1.6"],
-  header p {
-    text-align: left !important;
-  }
-
-  /* Lightbox responsive */
-  .lightbox {
-    display: none;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .lightbox img {
-    max-width: 95%;
-    max-height: 90vh;
-    object-fit: contain;
-  }
-
-  .prev, .next, .close {
-    font-size: 30px;
-  }
-
-  .prev { left: 10px; }
-  .next { right: 10px; }
-  .close { top: 10px; right: 15px; }
+    .header-text h1,
+    .header-text .metier,
+    .header-text .infos,
+    .header-text p {
+        text-align: left;
+    }
 }
 </style>
 </head>
@@ -168,19 +196,14 @@ a {
 
 <!-- HEADER -->
 <header>
-<div style="background-color:#111; color:white; display:flex; justify-content:center; padding:35px 20px;">
-  <div style="display:flex; max-width:900px; width:100%; align-items:center; gap:30px; flex-wrap:nowrap;">
-
-    <!-- Photo -->
-    <div style="flex:0 0 230px;">
-      <img src="photo-principale.jpg" alt="Surya Ismael" style="width:290px; height:auto; border-radius:4px;">
+  <div class="header-inner">
+    <div class="header-photo">
+      <img src="photo-principale.jpg" alt="Surya Ismael">
     </div>
-
-    <!-- Texte -->
-    <div style="flex:1; display:flex; flex-direction:column; margin-top:-20px;">
-      <h1 style="margin:0; font-family:'Playfair Display', serif; font-size:2.5em;">Surya Ismael</h1>
-      <div style="margin-top:8px; font-size:1.25em; font-weight:600;">Comédienne – Voix</div>
-      <div style="margin-top:8px; line-height:1.6; font-size:0.95em;">
+    <div class="header-text">
+      <h1>Surya Ismael</h1>
+      <div class="metier">Comédienne – Voix</div>
+      <div class="infos">
         <div>33 ans</div>
         <div>1m64 / 61kg</div>
         <div>Yeux marrons clairs / Cheveux châtains bouclés / Voix grave</div>
@@ -188,15 +211,10 @@ a {
         <div>Résidence principale : Toulouse</div>
         <div>Hébergements : Montpellier, Paris</div>
       </div>
-      <div style="height:25px;"></div>
-      <div style="width:60px; height:1px; background-color:white; margin-bottom:15px;"></div>
-      <p style="margin:0;">
-        📧 <a href="mailto:surya.ismael@gmail.com" style="color:white; font-weight:700; border-bottom:1px solid white;">surya.ismael@gmail.com</a>
-      </p>
+      <div class="separator"></div>
+      <p>📧 <a href="mailto:surya.ismael@gmail.com" style="color:white; font-weight:700; border-bottom:1px solid white;">surya.ismael@gmail.com</a></p>
     </div>
-
   </div>
-</div>
 </header>
 
 <!-- BANDES DEMO SERRÉES -->
@@ -281,8 +299,8 @@ a {
 
 <script>
 const images = [
-    "photo1.jpg","photo2.jpg","photo3.jpg","photo4.jpg","photo5.jpg","photo6.jpg",
-    "photo7.jpg","photo8.jpg","photo9.jpg","photo10.jpg","photo11.jpg","photo12.jpg"
+"photo1.jpg","photo2.jpg","photo3.jpg","photo4.jpg","photo5.jpg","photo6.jpg",
+"photo7.jpg","photo8.jpg","photo9.jpg","photo10.jpg","photo11.jpg","photo12.jpg"
 ];
 
 let currentIndex = 0;
