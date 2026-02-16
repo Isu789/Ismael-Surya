@@ -131,39 +131,28 @@ a {
     font-weight: 500;
 }
 
-/* --- VERSION MOBILE --- */
+/* --- VERSION MOBILE : texte sous la photo --- */
 @media screen and (max-width: 768px) {
   header > div {
-    flex-direction: column !important; /* photo et texte empilés */
-    align-items: center;
-    gap: 15px !important;
+    flex-direction: column !important; /* empile photo et texte */
+    align-items: center;               /* centre tout */
+    gap: 20px !important;              /* espace entre photo et texte */
   }
 
+  /* Photo plus petite pour mobile */
   header img {
-    width: 180px !important; /* photo plus petite */
+    width: 220px !important;
     height: auto !important;
   }
 
-  header h1 {
-    font-size: 2em !important; /* texte un peu plus petit */
-    text-align: center;
-  }
-
-  header div[style*="flex-direction:column"] > div {
-    text-align: center !important;
-  }
-
+  /* Conserver le style du texte comme sur ordinateur */
+  header h1, 
+  header div[style*="Comédienne – Voix"],
+  header div[style*="line-height:1.6"] ,
   header p {
     text-align: center !important;
   }
-
-  /* Réduire les marges entre éléments */
-  header div[style*="flex-direction:column"] {
-    margin-top: 10px !important;
-  }
 }
-
-
 
 </style>
 </head>
