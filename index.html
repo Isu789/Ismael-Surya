@@ -52,7 +52,7 @@ p {
 
 /* LIGHTBOX */
 .lightbox {
-    display: none;
+    display: none; /* invisible au chargement */
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -60,7 +60,6 @@ p {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.9);
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -189,10 +188,15 @@ header {
         text-align: left;
     }
 
-    /* Galerie mobile : images un peu plus petites, non coupées */
+    /* Galerie mobile : 2 colonnes max, images plus grandes */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
     .gallery img {
-        height: 160px;
-        object-fit: contain;
+        height: auto;
+        object-fit: cover;
     }
 }
 </style>
@@ -272,7 +276,7 @@ header {
 
 <!-- GALERIE -->
 <section>
-<h2>Galerie</h2>
+<h2>Photos</h2>
 <div class="gallery">
     <img src="photo1.jpg" onclick="openLightbox(0)" loading="lazy">
     <img src="photo2.jpg" onclick="openLightbox(1)" loading="lazy">
