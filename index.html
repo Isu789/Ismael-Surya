@@ -135,10 +135,10 @@ a {
 
 /* --- VERSION MOBILE --- */
 @media screen and (max-width: 768px) {
-  /* Header responsive : photo au-dessus, texte en dessous */
+  /* Header responsive : photo au-dessus, texte en dessous, aligné à gauche */
   header > div {
     flex-direction: column !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     gap: 20px !important;
   }
 
@@ -147,11 +147,12 @@ a {
     height: auto !important;
   }
 
+  /* Texte aligné à gauche sur mobile, même style que PC */
   header h1, 
   header div[style*="Comédienne – Voix"],
   header div[style*="line-height:1.6"],
   header p {
-    text-align: center !important;
+    text-align: left !important;
   }
 
   /* Lightbox responsive */
@@ -221,7 +222,7 @@ a {
 </section>
 
 <!-- BANDE DEMO VOIX OFF -->
-<section style="margin-top:10px;"> <!-- petit espace seulement -->
+<section style="margin-top:10px;">
   <h2>Bande Démo Voix Off</h2>
   <div class="video-container">
     <iframe src="https://www.youtube.com/embed/ID_DE_TA_VIDEO_VOIX" frameborder="0" allowfullscreen></iframe>
@@ -256,7 +257,6 @@ a {
 <!-- FORMATION -->
 <section>
 <h2>Formation</h2>
-
 <div class="cv-item">2024–2025 – Cours du soir théâtre et cinéma – LEDA Toulouse</div>
 <div class="cv-item">2024–2025 – Ateliers comédiens – L’Acting Lab Studio Toulouse & Or Ligne Studio Montpellier</div>
 <div class="cv-item">2024 – Stage au cours Florent – Montpellier (Admise)</div>
@@ -323,6 +323,6 @@ function changeSlide(direction) {
     document.getElementById("lightbox-img").src = images[currentIndex];
 }
 </script>
-    
+
 </body>
 </html>
