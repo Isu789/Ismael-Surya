@@ -47,7 +47,53 @@ p {
     height: 350px;
     object-fit: cover;
 }
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
 
+.lightbox img {
+    display: block;
+    margin: auto;
+    max-width: 85%;
+    max-height: 80vh;
+}
+
+.close,
+.prev,
+.next {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.close {
+    top: 20px;
+    right: 35px;
+    font-size: 45px;
+}
+
+.prev {
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.next {
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -182,18 +228,18 @@ surya.ismael@gmail.com
 <section>
 <h2>Galerie</h2>
 <div class="gallery">
-<img src="photo1.jpg" alt="">
-<img src="photo2.jpg" alt="">
-<img src="photo3.jpg" alt="">
-<img src="photo4.jpg" alt="">
-<img src="photo5.jpg" alt="">
-<img src="photo6.jpg" alt="">
-<img src="photo7.jpg" alt="">
-<img src="photo8.jpg" alt="">
-<img src="photo9.jpg" alt="">
-<img src="photo10.jpg" alt="">
-<img src="photo11.jpg" alt="">
-<img src="photo12.jpg" alt="">
+    <img src="photo1.jpg" onclick="openLightbox(0)" loading="lazy">
+    <img src="photo2.jpg" onclick="openLightbox(1)" loading="lazy">
+    <img src="photo3.jpg" onclick="openLightbox(2)" loading="lazy">
+    <img src="photo4.jpg" onclick="openLightbox(3)" loading="lazy">
+    <img src="photo5.jpg" onclick="openLightbox(4)" loading="lazy">
+    <img src="photo6.jpg" onclick="openLightbox(5)" loading="lazy">
+    <img src="photo7.jpg" onclick="openLightbox(6)" loading="lazy">
+    <img src="photo8.jpg" onclick="openLightbox(7)" loading="lazy">
+    <img src="photo9.jpg" onclick="openLightbox(8)" loading="lazy">
+    <img src="photo10.jpg" onclick="openLightbox(8)" loading="lazy">
+    <img src="photo11.jpg" onclick="openLightbox(8)" loading="lazy">
+    <img src="photo12.jpg" onclick="openLightbox(8)" loading="lazy">
 </div>
 </section>
 
@@ -203,5 +249,55 @@ surya.ismael@gmail.com
 <p>Email : <a href="mailto:surya.ismael@gmail.com">surya.ismael@gmail.com</a></p>
 </footer>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+    <img id="lightbox-img">
+    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+</div>
+
+<script>
+const images = [
+    "photo1.jpg",
+    "photo2.jpg",
+    "photo3.jpg",
+    "photo4.jpg",
+    "photo5.jpg",
+    "photo6.jpg",
+    "photo7.jpg",
+    "photo8.jpg",
+    "photo9.jpg",
+    "photo10.jpg",
+    "phot11.jpg",
+    "photo12.jpg"
+];
+
+let currentIndex = 0;
+
+function openLightbox(index) {
+    currentIndex = index;
+    document.getElementById("lightbox").style.display = "block";
+    document.getElementById("lightbox-img").src = images[currentIndex];
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function changeSlide(direction) {
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    }
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+
+    document.getElementById("lightbox-img").src = images[currentIndex];
+}
+</script>
+    
 </body>
 </html>
