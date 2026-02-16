@@ -152,6 +152,22 @@ a {
   header p {
     text-align: center !important;
   }
+
+
+    @media screen and (max-width: 768px) {
+  .lightbox img {
+    max-width: 95%;   /* presque toute la largeur de l’écran */
+    max-height: 90vh; /* hauteur maximale */
+    object-fit: contain; /* garder l’image entière visible */
+  }
+
+  .prev, .next, .close {
+    font-size: 30px;  /* icônes plus petites sur mobile */
+  }
+
+  .prev { left: 10px; }
+  .next { right: 10px; }
+  .close { top: 10px; right: 15px; }
 }
 
 </style>
