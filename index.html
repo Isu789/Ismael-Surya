@@ -47,6 +47,7 @@ p {
     height: 350px;
     object-fit: cover;
 }
+
 /* LIGHTBOX */
 .lightbox {
     display: none;
@@ -94,6 +95,7 @@ p {
     right: 30px;
     transform: translateY(-50%);
 }
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -131,45 +133,42 @@ a {
     font-weight: 500;
 }
 
-/* --- VERSION MOBILE : texte sous la photo --- */
+/* --- VERSION MOBILE --- */
 @media screen and (max-width: 768px) {
+  /* Header responsive : photo au-dessus, texte en dessous */
   header > div {
-    flex-direction: column !important; /* empile photo et texte */
-    align-items: center;               /* centre tout */
-    gap: 20px !important;              /* espace entre photo et texte */
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
   }
 
-  /* Photo plus petite pour mobile */
   header img {
     width: 220px !important;
     height: auto !important;
   }
 
-  /* Conserver le style du texte comme sur ordinateur */
   header h1, 
   header div[style*="Comédienne – Voix"],
-  header div[style*="line-height:1.6"] ,
+  header div[style*="line-height:1.6"],
   header p {
     text-align: center !important;
   }
 
-
-    @media screen and (max-width: 768px) {
+  /* Lightbox responsive */
   .lightbox img {
-    max-width: 95%;   /* presque toute la largeur de l’écran */
-    max-height: 90vh; /* hauteur maximale */
-    object-fit: contain; /* garder l’image entière visible */
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain;
   }
 
   .prev, .next, .close {
-    font-size: 30px;  /* icônes plus petites sur mobile */
+    font-size: 30px;
   }
 
   .prev { left: 10px; }
   .next { right: 10px; }
   .close { top: 10px; right: 15px; }
 }
-
 </style>
 </head>
 
@@ -178,44 +177,38 @@ a {
 <!-- HEADER -->
 <header>
 <div style="background-color:#111; color:white; display:flex; justify-content:center; padding:35px 20px;">
-<div style="display:flex; max-width:900px; width:100%; align-items:center; gap:30px;">
+  <div style="display:flex; max-width:900px; width:100%; align-items:center; gap:30px; flex-wrap:nowrap;">
 
-<!-- Photo -->
-<div style="flex:0 0 230px;">
-<img src="photo-principale.jpg" alt="Surya Ismael" style="width:290px; height:auto; border-radius:4px;">
-</div>
+    <!-- Photo -->
+    <div style="flex:0 0 230px;">
+      <img src="photo-principale.jpg" alt="Surya Ismael" style="width:290px; height:auto; border-radius:4px;">
+    </div>
 
-<!-- Texte -->
-<div style="flex:1; display:flex; flex-direction:column; margin-top:-20px;">
+    <!-- Texte -->
+    <div style="flex:1; display:flex; flex-direction:column; margin-top:-20px;">
 
-<h1 style="margin:0; font-family:'Playfair Display', serif; font-size:2.5em;">
-Surya Ismael
-</h1>
+      <h1 style="margin:0; font-family:'Playfair Display', serif; font-size:2.5em;">Surya Ismael</h1>
 
-<div style="margin-top:8px; font-size:1.25em; font-weight:600;">
-Comédienne – Voix
-</div>
+      <div style="margin-top:8px; font-size:1.25em; font-weight:600;">Comédienne – Voix</div>
 
-<div style="margin-top:8px; line-height:1.6; font-size:0.95em;">
-<div>33 ans</div>
-<div>1m64 / 61kg</div>
-<div>Yeux marrons clairs / Cheveux châtains bouclés / Voix grave</div>
-<div>Anglais courant</div>
-<div>Résidence principale : Toulouse</div>
-<div>Hébergements : Montpellier, Paris</div>
-</div>
+      <div style="margin-top:8px; line-height:1.6; font-size:0.95em;">
+        <div>33 ans</div>
+        <div>1m64 / 61kg</div>
+        <div>Yeux marrons clairs / Cheveux châtains bouclés / Voix grave</div>
+        <div>Anglais courant</div>
+        <div>Résidence principale : Toulouse</div>
+        <div>Hébergements : Montpellier, Paris</div>
+      </div>
 
-<div style="height:25px;"></div>
-<div style="width:60px; height:1px; background-color:white; margin-bottom:15px;"></div>
+      <div style="height:25px;"></div>
+      <div style="width:60px; height:1px; background-color:white; margin-bottom:15px;"></div>
 
-<p style="margin:0;">
-📧 <a href="mailto:surya.ismael@gmail.com" style="color:white; font-weight:700; border-bottom:1px solid white;">
-surya.ismael@gmail.com
-</a>
-</p>
+      <p style="margin:0;">
+        📧 <a href="mailto:surya.ismael@gmail.com" style="color:white; font-weight:700; border-bottom:1px solid white;">surya.ismael@gmail.com</a>
+      </p>
 
-</div>
-</div>
+    </div>
+  </div>
 </div>
 </header>
 
@@ -252,7 +245,7 @@ surya.ismael@gmail.com
 <a href="CV.pdf" download class="btn-download">Télécharger le CV</a>
 </section>
 
-<!-- FORMATION (SECTION SÉPARÉE CORRECTEMENT) -->
+<!-- FORMATION -->
 <section>
 <h2>Formation</h2>
 
@@ -277,9 +270,9 @@ surya.ismael@gmail.com
     <img src="photo7.jpg" onclick="openLightbox(6)" loading="lazy">
     <img src="photo8.jpg" onclick="openLightbox(7)" loading="lazy">
     <img src="photo9.jpg" onclick="openLightbox(8)" loading="lazy">
-    <img src="photo10.jpg" onclick="openLightbox(8)" loading="lazy">
-    <img src="photo11.jpg" onclick="openLightbox(8)" loading="lazy">
-    <img src="photo12.jpg" onclick="openLightbox(8)" loading="lazy">
+    <img src="photo10.jpg" onclick="openLightbox(9)" loading="lazy">
+    <img src="photo11.jpg" onclick="openLightbox(10)" loading="lazy">
+    <img src="photo12.jpg" onclick="openLightbox(11)" loading="lazy">
 </div>
 </section>
 
@@ -299,18 +292,8 @@ surya.ismael@gmail.com
 
 <script>
 const images = [
-    "photo1.jpg",
-    "photo2.jpg",
-    "photo3.jpg",
-    "photo4.jpg",
-    "photo5.jpg",
-    "photo6.jpg",
-    "photo7.jpg",
-    "photo8.jpg",
-    "photo9.jpg",
-    "photo10.jpg",
-    "phot11.jpg",
-    "photo12.jpg"
+    "photo1.jpg","photo2.jpg","photo3.jpg","photo4.jpg","photo5.jpg","photo6.jpg",
+    "photo7.jpg","photo8.jpg","photo9.jpg","photo10.jpg","photo11.jpg","photo12.jpg"
 ];
 
 let currentIndex = 0;
@@ -327,14 +310,8 @@ function closeLightbox() {
 
 function changeSlide(direction) {
     currentIndex += direction;
-
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1;
-    }
-    if (currentIndex >= images.length) {
-        currentIndex = 0;
-    }
-
+    if (currentIndex < 0) currentIndex = images.length - 1;
+    if (currentIndex >= images.length) currentIndex = 0;
     document.getElementById("lightbox-img").src = images[currentIndex];
 }
 </script>
