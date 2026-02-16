@@ -46,26 +46,27 @@ p {
     width: 100%;
     height: 350px;
     object-fit: cover;
+    cursor: pointer;
 }
 
 /* LIGHTBOX */
 .lightbox {
     display: none;
     position: fixed;
-    z-index: 999;
-    padding-top: 60px;
-    left: 0;
+    z-index: 9999;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
 }
 
 .lightbox img {
-    display: block;
-    margin: auto;
-    max-width: 85%;
-    max-height: 80vh;
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain;
 }
 
 .close,
@@ -78,30 +79,15 @@ p {
     user-select: none;
 }
 
-.close {
-    top: 20px;
-    right: 35px;
-    font-size: 45px;
-}
-
-.prev {
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-}
-
-.next {
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50%);
-}
+.close { top: 20px; right: 35px; font-size: 45px; }
+.prev { top: 50%; left: 30px; transform: translateY(-50%); }
+.next { top: 50%; right: 30px; transform: translateY(-50%); }
 
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    margin-top: 10px;
 }
 
 .video-container iframe {
@@ -147,7 +133,6 @@ a {
     height: auto !important;
   }
 
-  /* Texte aligné à gauche sur mobile, même style que PC */
   header h1, 
   header div[style*="Comédienne – Voix"],
   header div[style*="line-height:1.6"],
@@ -156,6 +141,12 @@ a {
   }
 
   /* Lightbox responsive */
+  .lightbox {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
   .lightbox img {
     max-width: 95%;
     max-height: 90vh;
@@ -187,11 +178,8 @@ a {
 
     <!-- Texte -->
     <div style="flex:1; display:flex; flex-direction:column; margin-top:-20px;">
-
       <h1 style="margin:0; font-family:'Playfair Display', serif; font-size:2.5em;">Surya Ismael</h1>
-
       <div style="margin-top:8px; font-size:1.25em; font-weight:600;">Comédienne – Voix</div>
-
       <div style="margin-top:8px; line-height:1.6; font-size:0.95em;">
         <div>33 ans</div>
         <div>1m64 / 61kg</div>
@@ -200,29 +188,23 @@ a {
         <div>Résidence principale : Toulouse</div>
         <div>Hébergements : Montpellier, Paris</div>
       </div>
-
       <div style="height:25px;"></div>
       <div style="width:60px; height:1px; background-color:white; margin-bottom:15px;"></div>
-
       <p style="margin:0;">
         📧 <a href="mailto:surya.ismael@gmail.com" style="color:white; font-weight:700; border-bottom:1px solid white;">surya.ismael@gmail.com</a>
       </p>
-
     </div>
+
   </div>
 </div>
 </header>
 
-<!-- BANDE DEMO ACTRICE -->
+<!-- BANDES DEMO SERRÉES -->
 <section>
   <h2>Bande Démo Actrice</h2>
   <div class="video-container">
     <iframe src="https://www.youtube.com/embed/ID_DE_TA_VIDEO_ACTRICE" frameborder="0" allowfullscreen></iframe>
   </div>
-</section>
-
-<!-- BANDE DEMO VOIX OFF -->
-<section style="margin-top:10px;">
   <h2>Bande Démo Voix Off</h2>
   <div class="video-container">
     <iframe src="https://www.youtube.com/embed/ID_DE_TA_VIDEO_VOIX" frameborder="0" allowfullscreen></iframe>
@@ -232,7 +214,6 @@ a {
 <!-- CV ARTISTIQUE -->
 <section>
 <h2>CV</h2>
-
 <h3>Courts métrages</h3>
 <div class="cv-item">2026 – <em>“Léa”</em> de Clément Levallois – D.E.F.I Production – Rôle : Claire</div>
 <div class="cv-item">2025 – <em>“Anatomie d’une toile”</em> de Noémie Ciesielski – ENSAV – Rôle : Iris</div>
@@ -308,7 +289,7 @@ let currentIndex = 0;
 
 function openLightbox(index) {
     currentIndex = index;
-    document.getElementById("lightbox").style.display = "block";
+    document.getElementById("lightbox").style.display = "flex";
     document.getElementById("lightbox-img").src = images[currentIndex];
 }
 
