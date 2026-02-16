@@ -130,6 +130,41 @@ a {
     text-decoration: none;
     font-weight: 500;
 }
+
+/* --- VERSION MOBILE --- */
+@media screen and (max-width: 768px) {
+  header > div {
+    flex-direction: column !important; /* photo et texte empilés */
+    align-items: center;
+    gap: 15px !important;
+  }
+
+  header img {
+    width: 180px !important; /* photo plus petite */
+    height: auto !important;
+  }
+
+  header h1 {
+    font-size: 2em !important; /* texte un peu plus petit */
+    text-align: center;
+  }
+
+  header div[style*="flex-direction:column"] > div {
+    text-align: center !important;
+  }
+
+  header p {
+    text-align: center !important;
+  }
+
+  /* Réduire les marges entre éléments */
+  header div[style*="flex-direction:column"] {
+    margin-top: 10px !important;
+  }
+}
+
+
+
 </style>
 </head>
 
