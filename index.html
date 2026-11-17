@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -39,20 +40,21 @@ p {
 /* GALERIE */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
 }
 
 .gallery img {
     width: 100%;
     height: 220px;
-    object-fit: cover;
+    object-fit: contain;
     cursor: pointer;
+    display: block;
 }
 
 /* LIGHTBOX */
 .lightbox {
-    display: none; /* invisible au chargement */
+    display: none;
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -78,9 +80,23 @@ p {
     user-select: none;
 }
 
-.close { top: 20px; right: 35px; font-size: 45px; }
-.prev { top: 50%; left: 30px; transform: translateY(-50%); }
-.next { top: 50%; right: 30px; transform: translateY(-50%); }
+.close {
+    top: 20px;
+    right: 35px;
+    font-size: 45px;
+}
+
+.prev {
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.next {
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
 
 .video-container {
     position: relative;
@@ -172,6 +188,7 @@ header {
 
 /* --- VERSION MOBILE --- */
 @media screen and (max-width: 768px) {
+
     .header-inner {
         flex-direction: column;
         align-items: flex-start;
@@ -188,15 +205,15 @@ header {
         text-align: left;
     }
 
-    /* Galerie mobile : 2 colonnes max, images plus grandes */
+    /* Galerie mobile : 2 colonnes */
     .gallery {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
     .gallery img {
-        height: auto;
-        object-fit: cover;
+        height: 180px;
+        object-fit: contain;
     }
 }
 </style>
@@ -215,7 +232,7 @@ header {
       <div class="metier">Comédienne – Voix off</div>
       <div class="infos">
         <div>34 ans</div>
-          <div>Taille : 1m64 / Taille veste : 38-40 / Taille pantalon : 38 / Pointure : 39</div>
+        <div>Taille : 1m64 / Taille veste : 38-40 / Taille pantalon : 38 / Pointure : 39</div>
         <div>Yeux : marrons clairs / Cheveux : châtains bouclés / Voix grave</div>
         <div>Français natif, Anglais courant</div>
         <div>Résidence principale : Toulouse</div>
@@ -227,12 +244,11 @@ header {
   </div>
 </header>
 
-
 <!-- BANDES DEMO -->
 <section>
   <h2>Bande Démo Courts métrages</h2>
   <div class="video-container">
-    <iframe 
+    <iframe
       src="https://www.youtube.com/embed/PbOv0iHAa20"
       title="Bande Démo Courts métrages"
       frameborder="0"
@@ -240,53 +256,49 @@ header {
     </iframe>
   </div>
 
-    <h2>Vidéo de présentation</h2>
+  <h2>Vidéo de présentation</h2>
   <div class="video-container">
-    <iframe 
+    <iframe
       src="https://www.youtube.com/embed/OCb5uaFruBM"
       title="Vidéo de présentation"
       frameborder="0"
       allowfullscreen>
     </iframe>
-        </div>
+  </div>
 
-
-    <h2>Reproduction scène du film "Le nom des gens" de Michel Leclerc : Bahia</h2>
+  <h2>Reproduction scène du film "Le nom des gens" de Michel Leclerc : Bahia</h2>
   <div class="video-container">
-    <iframe 
+    <iframe
       src="https://www.youtube.com/embed/1TrJqlZqKtY"
-      title="Reproduction scène du film "Le nom des gens" de Michel Leclerc : Bahia"
+      title="Reproduction scène du film Le nom des gens de Michel Leclerc : Bahia"
       frameborder="0"
       allowfullscreen>
     </iframe>
-        </div>
+  </div>
 
-    
-       <h2>Reproduction scène du film "Elisa" de Jean Becker : Elisa</h2>
+  <h2>Reproduction scène du film "Elisa" de Jean Becker : Elisa</h2>
   <div class="video-container">
-    <iframe 
+    <iframe
       src="https://www.youtube.com/embed/fbUcZPQCLYs"
-      title="Reproduction scène du film "Elisa" de Jean Becker : Elisa"
+      title="Reproduction scène du film Elisa de Jean Becker : Elisa"
       frameborder="0"
       allowfullscreen>
     </iframe>
-        </div>
-
+  </div>
 
   <h2>Théâtre : Louis dans "Juste la fin du monde" de Jean-Luc Lagarce</h2>
   <div class="video-container">
-    <iframe 
+    <iframe
       src="https://www.youtube.com/embed/UZn9P7a6400"
-      title="Théâtre : Louis dans "Juste la fin du monde" de Jean-Luc Lagarce"
+      title="Théâtre : Louis dans Juste la fin du monde de Jean-Luc Lagarce"
       frameborder="0"
       allowfullscreen>
     </iframe>
-        </div>
-    
+  </div>
 
   <h2>Bande Démo Voix Off</h2>
   <div class="video-container">
-    <iframe 
+    <iframe
       src="https://www.youtube.com/embed/XDVJLoS8c7g"
       title="Bande Démo Voix Off"
       frameborder="0"
@@ -295,11 +307,10 @@ header {
   </div>
 </section>
 
-
-
 <!-- CV ARTISTIQUE -->
 <section>
 <h2>CV</h2>
+
 <h3>Courts métrages</h3>
 <div class="cv-item">2026 – <em>“Léa”</em> de Clément Levallois – D.E.F.I Production – Rôle : Claire</div>
 <div class="cv-item">2025 – <em>“Anatomie d’une toile”</em> de Noémie Ciesielski – ENSAV – Rôle : Iris</div>
@@ -323,11 +334,11 @@ header {
 
 <!-- FORMATION -->
 <section>
-<h2>Formation : école, ateliers et stages </h2>
+<h2>Formation : école, ateliers et stages</h2>
 <div class="cv-item">2026 : Atelier théâtre et cinéma - Acting and speaking - Montpellier</div>
-<div class="cv-item">2025 : Atelier comédiens jeu cinéma – L’Acting Lab Studio - Toulouse </div>
+<div class="cv-item">2025 : Atelier comédiens jeu cinéma – L’Acting Lab Studio - Toulouse</div>
 <div class="cv-item">2024–2025 : Cours du soir théâtre et cinéma – école LEDA Le Studio de l'Acteur - Toulouse</div>
-<div class="cv-item"> 2024 : Atelier comédien jeu cinéma - Or Ligne Studio - Montpellier</div>
+<div class="cv-item">2024 : Atelier comédien jeu cinéma - Or Ligne Studio - Montpellier</div>
 <div class="cv-item">2024 : Stage théâtre et jeu face caméra – Cours Florent - Montpellier</div>
 <div class="cv-item">2011–2014 : Cours de théâtre - Licence Arts du spectacle et communication – Université Toulouse 2</div>
 <div class="cv-item">2006–2009 : Cours de théâtre - Compagnie Théâtre de Pierres – Fouzilhon (34)</div>
@@ -337,17 +348,17 @@ header {
 <!-- GALERIE -->
 <section>
 <h2>Photos</h2>
-<div class="gallery">
-    <img src="photo1.jpg" onclick="openLightbox(0)" loading="lazy">
-    <img src="photo2.jpg" onclick="openLightbox(1)" loading="lazy">
-    <img src="photo3.jpg" onclick="openLightbox(2)" loading="lazy">
-    <img src="photo4.jpg" onclick="openLightbox(3)" loading="lazy">
-    <img src="photo5.jpg" onclick="openLightbox(4)" loading="lazy">
-    <img src="photo6.jpg" onclick="openLightbox(5)" loading="lazy">
-    <img src="photo7.jpg" onclick="openLightbox(6)" loading="lazy">
-    <img src="photo8.jpg" onclick="openLightbox(7)" loading="lazy">
-    <img src="photo9.jpg" onclick="openLightbox(8)" loading="lazy">
 
+<div class="gallery">
+    <img src="photo1.jpg" alt="Photo 1" onclick="openLightbox(0)" loading="lazy">
+    <img src="photo2.jpg" alt="Photo 2" onclick="openLightbox(1)" loading="lazy">
+    <img src="photo3.jpg" alt="Photo 3" onclick="openLightbox(2)" loading="lazy">
+    <img src="photo4.jpg" alt="Photo 4" onclick="openLightbox(3)" loading="lazy">
+    <img src="photo5.jpg" alt="Photo 5" onclick="openLightbox(4)" loading="lazy">
+    <img src="photo6.jpg" alt="Photo 6" onclick="openLightbox(5)" loading="lazy">
+    <img src="photo7.jpg" alt="Photo 7" onclick="openLightbox(6)" loading="lazy">
+    <img src="photo8.jpg" alt="Photo 8" onclick="openLightbox(7)" loading="lazy">
+    <img src="photo9.jpg" alt="Photo 9" onclick="openLightbox(8)" loading="lazy">
 </div>
 </section>
 
@@ -361,14 +372,21 @@ header {
 <div id="lightbox" class="lightbox">
     <span class="close" onclick="closeLightbox()">&times;</span>
     <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
-    <img id="lightbox-img">
+    <img id="lightbox-img" alt="Photo agrandie">
     <span class="next" onclick="changeSlide(1)">&#10095;</span>
 </div>
 
 <script>
 const images = [
-"photo1.jpg","photo2.jpg","photo3.jpg","photo4.jpg","photo5.jpg","photo6.jpg",
-"photo7.jpg","photo8.jpg","photo9.jpg"
+    "photo1.jpg",
+    "photo2.jpg",
+    "photo3.jpg",
+    "photo4.jpg",
+    "photo5.jpg",
+    "photo6.jpg",
+    "photo7.jpg",
+    "photo8.jpg",
+    "photo9.jpg"
 ];
 
 let currentIndex = 0;
@@ -385,8 +403,15 @@ function closeLightbox() {
 
 function changeSlide(direction) {
     currentIndex += direction;
-    if (currentIndex < 0) currentIndex = images.length - 1;
-    if (currentIndex >= images.length) currentIndex = 0;
+
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    }
+
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+
     document.getElementById("lightbox-img").src = images[currentIndex];
 }
 </script>
